@@ -1,0 +1,211 @@
+.custom-container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include media-breakpoint-up(lg) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+    max-width: 100%;
+  }
+}
+
+.mySwiper .swiper-slide {
+  img {
+    object-fit: cover;
+    filter: blur(5px);
+    border-radius: 80px;
+    @include media-breakpoint-down(lg) {
+      border-radius: 0;
+    }
+  }
+}
+
+.mySwiper .swiper-slide-active {
+  position: relative;
+  overflow: hidden;
+  border-radius: 80px;
+  @include media-breakpoint-down(lg) {
+    border-radius: 0;
+  }
+
+  .main-image {
+    filter: blur(0px);
+  }
+
+  .overlay-image {
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    z-index: 10;
+  }
+}
+
+.swiper-button-arrow-back {
+  color: $primary-100;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  z-index: 10;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.swiper-button-arrow-forward {
+  color: $primary-100;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: 22%;
+  z-index: 10;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.swiper-button-arrow-back1 {
+  color: $primary-100;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  z-index: 10;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.swiper-button-arrow-forward1 {
+  color: $primary-100;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  z-index: 10;
+  border-radius: 12px;
+  padding: 20px;
+  cursor: pointer;
+  box-shadow: 0px 10px 15px -3px #0000001a;
+}
+
+.banner-text {
+  background-color: white;
+  position: absolute;
+  bottom: 25%;
+  left: 30%;
+  z-index: 10;
+  border-radius: 100px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @include media-breakpoint-down(xxl) {
+    padding: 10px;
+  }
+  @include media-breakpoint-down(lg) {
+    left: 0%;
+    bottom: 10%;
+    padding: 8px;
+  }
+}
+
+.banner-GO {
+  background-color: $primary-100;
+  position: absolute;
+  bottom: 0%;
+  left: 25.4%;
+  z-index: 10;
+  border-radius: 0 80px 0 80px;
+  display: flex;
+  align-items: center;
+  a {
+    padding: 32px;
+    @include media-breakpoint-down(xxl) {
+      padding: 14px;
+    }
+  }
+  @include media-breakpoint-down(xxl) {
+    left: 26%;
+  }
+  @include media-breakpoint-down(lg) {
+    display: none;
+  }
+}
+
+.card {
+  box-shadow: 0px 25px 50px -12px #0000001f;
+  border-radius: 20px;
+}
+
+.card-img-top {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.dead-line {
+  top: 16px;
+  left: 16px;
+}
+
+.people-img {
+  width: 44px;
+  height: 44px;
+}
+
+.flower-2 {
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    left: -10%;
+    top: 0;
+    width: 560px;
+    height: 560px;
+    z-index: -1;
+    background-image: url("/assets/images/deco/flower-2.png");
+    @include media-breakpoint-down(lg) {
+      left: -30%;
+    }
+    @include media-breakpoint-down(md) {
+      left: -40%;
+    }
+    @include media-breakpoint-down(sm) {
+      left: -60%;
+    }
+  }
+}
+
+.teacher {
+  .card {
+    box-shadow: none;
+    border: 0;
+  }
+  .card-img-top {
+    margin-left: 80px;
+    width: auto;
+  }
+  .card-body {
+    background: white;
+    margin-right: 32px;
+    margin-top: -100px;
+    box-shadow: 0px 25px 50px -12px #0000001f;
+    border-radius: 20px;
+  }
+}
+
+.bg-line {
+  background-image: url("../images/deco/line-1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  @include media-breakpoint-down(lg) {
+    background-image: none;
+  }
+}

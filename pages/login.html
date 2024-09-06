@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learning - 登入</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <%- include('./layout/header'); -%>
+    <div class="container">
+      <div class="row my-7">
+        <!-- 左邊 -->
+        <div class="col-lg-5 d-lg-flex align-items-center d-none">
+          <img src="../assets/images/login.png" alt="login" />
+        </div>
+        <div class="col-lg-1 d-none d-lg-block"></div>
+        <!-- 右邊 -->
+        <div class="col-lg-6 col-12 d-flex flex-column">
+          <h2 class="fs-lg-1 fs-3 text-black mb-lg-7 mb-4">歡迎回來！</h2>
+          <!-- google -->
+          <button
+            type="button"
+            class="btn border-neutral-40 mb-3 d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="../assets/images/icons/ic_google.png"
+              width="24"
+              height="24"
+              alt="ic_google"
+            />
+            <span class="d-block mx-auto">使用 Google 帳號登入</span>
+          </button>
+          <!-- facebook -->
+          <button
+            type="button"
+            class="btn border-neutral-40 mb-3 d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="../assets/images/icons/ic_facebook.png"
+              width="24"
+              height="24"
+              alt="ic_facebook"
+            />
+            <span class="d-block mx-auto">使用 Facebook 帳號登入</span>
+          </button>
+          <!-- apple -->
+          <button
+            type="button"
+            class="btn border-neutral-40 mb-lg-7 mb-4 d-flex align-items-center justify-content-center"
+          >
+            <img
+              src="../assets/images/icons/ic_apple.png"
+              width="24"
+              height="24"
+              alt="ic_apple"
+            />
+            <span class="d-block mx-auto">使用 Apple 帳號登入</span>
+          </button>
+          <p class="text-black mb-3">或使用 Learning 帳號登入</p>
+          <form class="mb-lg-7 mb-4">
+            <div class="mb-3">
+              <label for="email" class="form-label">
+                電子信箱
+                <span class="text-error-100"> *</span>
+              </label>
+              <input
+                type="email"
+                class="form-control p-3"
+                id="email"
+                placeholder="請輸入電子信箱"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">
+                密碼
+                <span class="text-error-100"> *</span>
+              </label>
+              <input
+                type="password"
+                class="form-control p-3"
+                id="password"
+                placeholder="請輸入密碼"
+                required
+              />
+            </div>
+            <div class="d-flex justify-content-between mb-lg-7 mb-4">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="checkbox"
+                />
+                <label class="form-check-label" for="checkbox">
+                  記住帳號
+                </label>
+              </div>
+              <p>忘記密碼？</p>
+            </div>
+            <button class="btn btn-primary w-100" type="submit">
+              立即登入
+            </button>
+          </form>
+          <p>
+            沒有 Learning 帳號嗎？
+            <a
+              class="text-primary-100 text-decoration-underline"
+              href="register.html"
+            >
+              立即註冊
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

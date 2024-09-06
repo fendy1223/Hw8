@@ -1,0 +1,74 @@
+.logo {
+  width: 200px;
+  height: 32px;
+  @include media-breakpoint-down(lg) {
+    width: 125px;
+    height: 20px;
+  }
+}
+
+.course-5 {
+  @include media-breakpoint-down(sm) {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.desktop {
+  box-shadow: $box-shadow;
+  border-radius: $border-radius-pill;
+  @include media-breakpoint-down(md) {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  &::after {
+    content: "\e313";
+    font-family: "Material Symbols Outlined";
+    border: none;
+  }
+}
+
+.dropdown-item {
+  padding: 12px;
+  padding-left: 24px;
+  border-radius: 12px;
+  &:not(.dropdown-item-all) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &::after {
+      content: "\e5cc";
+      font-family: "Material Symbols Outlined";
+    }
+    &.active,
+    &:hover {
+      background: $primary-100;
+      color: $white;
+      font-weight: bold;
+    }
+  }
+}
+
+.desktop-nav-dropdown-menu {
+  &[data-bs-popper] {
+    left: 15%;
+  }
+  .dropdown {
+    &-one,
+    &-two {
+      width: 232px;
+    }
+    &-three {
+      width: 399px;
+    }
+  }
+}
+
+.icon-star {
+  color: #f6bd2b;
+}
